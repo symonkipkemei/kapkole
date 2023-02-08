@@ -13,7 +13,7 @@
 <h1 id="intro">File Search</h1>
 
 ## brief
-- Keep track of your desktop clutter
+- Do it for your country, do it for your name. Be a champion!
 
 
 ## Task:
@@ -71,14 +71,6 @@ To get this project up and running locally, you must already have python plus th
 ```
 
 - [Live Version](https://replit.com/@symonkipkemei/kapkole#kapkole.py)
-
-
-<ILLUSTRATIONS>
-
-<h1 id="illus">Illustrations</h1>
-
-![Before clean up](before.png)
-![After clean up](after.png)
 
 
 <PROJECT-INFORMATION>
