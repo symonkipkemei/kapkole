@@ -1,6 +1,6 @@
 
 from parameters import *
-
+import webbrowser
 
 def main():
     """The search for the princess begins, Would you rescue her? or will you be part of the statistics of the fallen soldiers?
@@ -18,10 +18,10 @@ def main():
         warrior = Hero(player)
     
         #opponents
-        black_panther = Opponent("Black Panther",2)
-        gorilla =Opponent("Gorilla",3)
+        black_panther = Opponent("Black Panther",0)
+        gorilla =Opponent("Gorilla",0)
         prey_mantis =Opponent("Prey Mantis",0)
-        cheetah =Opponent("Cheetah",1)
+        cheetah =Opponent("Cheetah",0)
 
         #opponent pool
         opponent_pool = [black_panther,gorilla,prey_mantis,cheetah]
@@ -109,11 +109,16 @@ def main():
 
                 if choice == 1:
                     #check if warrior has met the set requirements
+                    #if player wins, open youtube and play superhero by the script
+                    winnerurl = "https://www.youtube.com/watch?v=WIm1GgfRz6M"
+                    loserurl = "https://www.youtube.com/watch?v=RgKAFK5djSk"
                     if warrior.head_count >= beheaded and warrior.arsenal[custodian_fruits[0]] >= custodian_needs[custodian_fruits[0]]   and warrior.arsenal[custodian_fruits[1]] >= custodian_needs[custodian_fruits[1]] and warrior.arsenal[custodian_fruits[2]] >= custodian_needs[custodian_fruits[2]]:
                         print("You have found the daughter of the king . congratulations!")
+                        webbrowser.open(winnerurl)
                         return_previous_room = False
                     elif warrior.key == custodian_keys:
                         print("You have found the daughter of the king . congratulations!")
+                        webbrowser.open(loserurl)
                         return_previous_room = False
 
                     else:
@@ -123,6 +128,7 @@ def main():
                         time.sleep(3)
                         print("👏👏👏👏👏✨✨✨")
                         print(f"You died as a result of injuries from the baboon")
+                        webbrowser.open(loserurl)
                         return_previous_room = False
 
 
