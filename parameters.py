@@ -109,11 +109,6 @@ class Boss(Opponent):
         print("✨✨✨")
         print(f"You died as a result of injuries from the baboon {other.name}")
 
-class WeakOpponent(Opponent):
-    def attack(self, other) -> bool:
-
-
-        return super().attack(other)
 
 class Hero:
     "Generates a gameplay of the hero"

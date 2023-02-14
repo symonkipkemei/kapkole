@@ -49,7 +49,7 @@ def main():
             print("_________________________________________________________________")
             print("all the best in search for the princess")
 
-            # select an opponent randomly from the pool
+            # takes care arising from emptying the opponents pool
             try:
                 opp = random.choice(opponent_pool)
             except IndexError:
@@ -61,7 +61,6 @@ def main():
             if selection == doors[1]:
                 # fight if hero wins collect the opponents head, if he loses all items are retrieved
                 print("You found an Opponent!\n")
-
                 win = opp.attack(warrior)
                 #if the warrior wins;
                 if win:
@@ -70,7 +69,6 @@ def main():
                     if opponent_pool is None:
                         print("You have found a key")
                         warrior.key += 1
-
                     warrior.head_count += 1
 
                 else:
@@ -115,7 +113,6 @@ def main():
                         time.sleep(5)
                         webbrowser.open(loserurl)
                         return_previous_room = False
-
                     else:
                         baboon.attack(opp)
                         webbrowser.open(loserurl)
@@ -125,7 +122,6 @@ def main():
                 #exit the game
                 print("\n“There is no failure except in no longer trying.”― Elbert Hubbard.")
                 return_previous_room = False
-
 
         #play again option
         user_choice = input("\nDo you want to play again? (y/n):")
